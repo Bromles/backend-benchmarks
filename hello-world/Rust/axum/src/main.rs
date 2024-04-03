@@ -1,21 +1,17 @@
 use axum::{routing::get, Router};
-use std::net::SocketAddr;
 use axum::response::IntoResponse;
 
 async fn handler() -> impl IntoResponse {
-    "Hello World"
+    "Hello World!"
 }
 
 #[tokio::main]
 async fn main() {
     let app = Router::new().route("/", get(handler));
 
-    let addr = SocketAddr::from(([0, 0, 0, 0], 8080));
+    let addr = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
 
-    println!("Listening on {}", addr);
-
-    axum::Server::bind(&addr)
-        .serve(app.into_make_service())
+    axum::serve(addr, app)
         .await
         .unwrap();
 }
