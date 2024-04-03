@@ -1,5 +1,5 @@
 {
-  "name": "expressbenchmark",
+  "name": "fastifybenchmark",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -13,10 +13,9 @@
   "main": "index.ts",
   "type": "module",
   "dependencies": {
-    "express": "^4.19.2"
+    "fastify": "^4.26.2"
   },
   "devDependencies": {
-    "@types/express": "^4.17.21",
     "@types/node": "^20.12.3",
     "concurrently": "^8.2.2",
     "nodemon": "^3.1.0",

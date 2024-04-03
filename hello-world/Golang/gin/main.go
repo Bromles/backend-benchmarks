@@ -3,7 +3,7 @@ package main
 import "github.com/gin-gonic/gin"
 
 func handle(c *gin.Context) {
-	c.String(200, "Hello World")
+	c.String(200, "Hello World!")
 }
 
 func main() {
