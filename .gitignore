@@ -2,6 +2,7 @@
 # Compiled class file
 *.class
 .vscode
+**/stats.txt
 
 # Log file
 *.log

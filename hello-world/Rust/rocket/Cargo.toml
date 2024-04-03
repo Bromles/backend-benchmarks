@@ -7,3 +7,9 @@ edition = "2021"
 
 [dependencies]
 rocket = "0.5"
+
+[profile.release]
+strip = true
+lto = true
+opt-level = 3
+codegen-units = 1
