@@ -8,6 +8,6 @@ import reactor.core.publisher.Mono;
 public class HelloController {
     @GetMapping("/")
     public Mono<String> hello() {
-        return Mono.just("Hello World");
+        return Mono.just("Hello World!");
     }
 }
